@@ -1,0 +1,30 @@
+$ cat informe_hardening_r1.txt 
+================================================================================
+       INFORME DE AUDITORÍA DE HARDENING CIS - CISCO IOS
+================================================================================
+Dispositivo Objetivo : 10.8.46.1
+Fecha de Auditoría   : 2026-11-10 10:28:17
+Modo de Operación    : SOLO LECTURA (Sin aplicar reglas)
+Puntuación Obtenida  : 7/12 (58.3%)
+--------------------------------------------------------------------------------
+ID         | SEVERIDAD  | ESTADO     | CONTROL EVALUADO
+--------------------------------------------------------------------------------
+CIS-1.1    | MEDIA      | NO CUMPLE  | Servicio de cifrado de contraseñas activado
+  └─ Remedio recomendado: service password-encryption
+CIS-1.2    | BAJA       | CUMPLE     | Deshabilitar servicios tcp/udp-small-servers
+CIS-2.1    | ALTA       | CUMPLE     | AAA Habilitado globalmente
+CIS-3.1    | MEDIA      | NO CUMPLE  | Deshabilitar CDP globalmente
+  └─ Remedio recomendado: no cdp run
+CIS-3.2    | MEDIA      | CUMPLE     | Deshabilitar servidor HTTP no seguro
+CIS-3.3    | MEDIA      | NO CUMPLE  | Deshabilitar IP Source Routing
+  └─ Remedio recomendado: no ip source-route
+CIS-3.4    | BAJA       | NO CUMPLE  | Deshabilitar respuestas ICMP Redirects
+  └─ Remedio recomendado: no ip redirects
+CIS-4.1    | MEDIA      | CUMPLE     | Registro de eventos (Logging) en buffer
+CIS-4.2    | BAJA       | CUMPLE     | Sellado de tiempo en logs (Timestamps)
+CIS-5.1    | BAJA       | NO CUMPLE  | Banner de advertencia configurado (MOTD / Login)
+  └─ Remedio recomendado: banner motd / banner login
+CIS-6.1    | ALTA       | CUMPLE     | Restricción de transporte SSH en líneas VTY
+CIS-6.2    | MEDIA      | CUMPLE     | Timeout de inactividad configurado en líneas
+================================================================================
+Fin del reporte de auditoría.
