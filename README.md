@@ -40,8 +40,6 @@ Configuración de port-security en los puertos de acceso del switch (interfaz Gi
 
 ![Configuración Port-Security](imagenes/03_sw1_port_security_cfg.png)
 
-![Demostración de Violación](imagenes/04_sw1_port_security_violation.png)
-
 ## Zabbix cliente DHCP y monitoreo SNMP
 
 Kali obtiene su dirección IP de forma dinámica mediante DHCP desde R1. R1 y SW1 cuentan con agente SNMPv2c configurado con comunidad de solo lectura (`RO`), permitiendo la recolección de métricas desde el panel de Zabbix.
